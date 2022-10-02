@@ -1,0 +1,167 @@
+@import url('htpps://fonts.googleapis.com/css2?family=Cncert+One&display=swap');
+
+
+*{
+    font-family: 'Concert One', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+a {
+    color:#0954d4;
+    font-size: 20px;
+    
+}
+h1{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 8em;
+    height: 100vh;
+
+}
+h1 span{
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    animation: animação 3s linear infinite;
+
+}
+h1 span:nth-child(1){
+    animation-delay: 0s;
+}
+h1 span:nth-child(2){
+    animation-delay: 0s;
+}
+h1 span:nth-child(3){
+    animation-delay: 0s;
+}
+h1 span:nth-child(4){
+    animation-delay: 0s;
+}
+h1 span:nth-child(5){
+    animation-delay: 0.5s;
+}
+h1 span:nth-child(6){
+    animation-delay: 1.5s;
+}
+h1 span:nth-child(7){
+    animation-delay: 1s;
+}
+h1 span:nth-child(8){
+    animation-delay: 1.5s;
+}
+h1 span:nth-child(9){
+    animation-delay: 0.5s;
+}
+h1 span:nth-child(10){
+    animation-delay: 1s;
+}
+h1 span:nth-child(11){
+    animation-delay: 1.5s;
+}
+
+
+@keyframes animação{
+    0%,100%{
+        color: #fff;
+        filter: blur(2px);
+        text-shadow: 0 0 10px #0954d4,
+                     0 0 20px #0954d4,
+                     0 0 40px #0954d4,
+                     0 0 80px #0954d4,
+                     0 0 120px #0954d4,
+                     0 0 200px #0954d4,
+                     0 0 300px #0954d4,
+                     0 0 400px #0954d4;
+
+    }
+    5%,95%{
+        color: #111;
+        filter: blur(0px);
+        text-shadow: none;
+        
+    }
+}
+h3{
+    color: aliceblue;
+    text-align: center;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+    background: #000000;
+    transition: background 0.4s ease-in;
+}
+input[type=radio]{
+    display: none;
+}
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.card{
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    max-width:600px;
+    max-height: 600px;
+    display: flex;
+    transform-style: preserve-3d;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.cards{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+#item-1:checked ~ .cards #song-3,
+#item-2:checked ~ .cards #song-1,
+#item-3:checked ~ .cards #song-2{
+    transform: translateX(-60%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+}
+#item-1:checked ~ .cards #song-2,
+#item-2:checked ~ .cards #song-3,
+#item-3:checked ~ .cards #song-1{
+    transform: translateX(60%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+
+
+}
+#item-1:checked ~ .cards #song-1,
+#item-2:checked ~ .cards #song-2,
+#item-3:checked ~ .cards #song-3{
+    transform: translateX(0) scale(1);
+    opacity:1;
+    z-index:1;
+}
+#item-1:checked ~ .cards #song-2 img,
+#item-2:checked ~ .cards #song-3 img,
+#item-3:checked ~ .cards #song-1 img{
+    box-shadow: 0px 0px 5px 0px rgba(81,81,81,0.47);
+
+
+}
